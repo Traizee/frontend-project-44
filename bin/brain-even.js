@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import welcome from '../bin/brain-games.js';
 
 
 const answerUser = (answer, randomNumber) => {
@@ -53,4 +54,7 @@ console.log(`Congratulations, ${userName}`)
     console.log(`Let\'s try again, ${userName}`)
   }
 }
-export default brainEven
+
+const userName = welcome() 
+
+brainEven(userName)
