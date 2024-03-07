@@ -1,5 +1,7 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome from '../bin/brain-games.js';
+
+import {welcome} from '../bin/brain-games.js';
 
 
 const answerUser = (answer, randomNumber) => {
