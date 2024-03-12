@@ -9,7 +9,7 @@ console.log(`Hello, ${userName}!`);
 return userName
 }
 
-console.log(welcome())
+
 
 
 
