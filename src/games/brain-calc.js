@@ -2,6 +2,7 @@ import gameStart from '../indexCalc.js'
 import randomNumber from '../helper.js'
 
 const description = 'What is the result of the expression?'
+
 const getQuestionAndAnswer = () => { 
 let num1 = randomNumber()
 let num2 = randomNumber()
