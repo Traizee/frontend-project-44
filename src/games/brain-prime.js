@@ -17,7 +17,7 @@ const getPrime = (num) => {
 
 const getQuestionAndAnswer = () => {
     const question = randomNumber();
-	const correctAnswer = !getPrime(question) === false ? 'yes' : 'no'
+	const correctAnswer = getPrime(question) === true ? 'yes' : 'no'
 	return [question, correctAnswer]    
 }
 
