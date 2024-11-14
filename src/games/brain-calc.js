@@ -3,16 +3,18 @@ import randomNumber from '../helper.js'
 
 const description = 'What is the result of the expression?'
 
-const getQuestionAndAnswer = () => { 
-let num1 = randomNumber()
-let num2 = randomNumber()
+const chooseSign = () => {
+  const signs = ['+', '-', '*'];
+  const randomSign = Math.floor(Math.random() * 3)
+  const sign = signs[randomSign]
 
-const randomSign = Math.floor(Math.random() * 3)
-let answer
-const signs = ['+', '-', '*'];
-const sign = signs[randomSign]
+  return sign
+}
 
-switch (sign) {
+const calculate = (num1, num2, sign) => {
+  let answer
+
+  switch (sign) {
     case '+':
        answer = num1 + num2; 
         break
@@ -28,9 +30,19 @@ switch (sign) {
     default:
        answer = null 
 } 
-      
+
+return answer
+}
+
+
+const getQuestionAndAnswer = () => { 
+  const sign = chooseSign()
+
+  let num1 = randomNumber()
+  let num2 = randomNumber()
+
 	const question = `${num1} ${sign} ${num2}`;
-	const correctAnswer = answer
+	const correctAnswer = calculate(num1, num2, sign)
   
   return [question, correctAnswer]
 }
