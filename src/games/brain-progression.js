@@ -25,7 +25,7 @@ const getQuestionAndAnswer = () => {
 
     let arr = createArray();
     let arrNew = arr.slice();
-    arrNew[hiddenValue] = '\'..\''
+    arrNew[hiddenValue] = '..'
 
     const question = arrNew.join(' ')
 	const correctAnswer = arr[hiddenValue].toString()
