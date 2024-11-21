@@ -1,4 +1,4 @@
-import gameStart from '../indexCalc.js'
+import gameStart from '../index.js'
 import randomNumber from '../helper.js'
 
 const description = 'What number is missing in the progression?'
@@ -28,7 +28,7 @@ const getQuestionAndAnswer = () => {
     arrNew[hiddenValue] = '\'..\''
 
     const question = arrNew.join(' ')
-	const correctAnswer = arr[hiddenValue]
+	const correctAnswer = arr[hiddenValue].toString()
 	return [question, correctAnswer]
 
 }

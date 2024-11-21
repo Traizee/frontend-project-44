@@ -1,4 +1,4 @@
-import gameStart from '../indexCalc.js'
+import gameStart from '../index.js'
 import randomNumber from '../helper.js'
 
 const description = 'Find the greatest common divisor of given numbers.'
@@ -16,7 +16,7 @@ const getQuestionAndAnswer = () => {
     let num2 = randomNumber()
 
 	const question = `${num1} ${num2}`
-	const correctAnswer = gcd(num1, num2)
+	const correctAnswer = gcd(num1, num2).toString()
 	return [question, correctAnswer]
 }
 
