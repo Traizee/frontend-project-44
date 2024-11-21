@@ -1,52 +1,52 @@
-import gameStart from '../index.js'
-import randomNumber from '../helper.js'
+import gameStart from '../index.js';
+import randomNumber from '../helper.js';
 
-const description = 'What is the result of the expression?'
+const description = 'What is the result of the expression?';
 
 const chooseSign = () => {
   const signs = ['+', '-', '*'];
-  const randomSign = Math.floor(Math.random() * 3)
-  const sign = signs[randomSign]
+  const randomSign = Math.floor(Math.random() * 3);
+  const sign = signs[randomSign];
 
-  return sign
+  return sign;
 }
 
 const calculate = (num1, num2, sign) => {
-  let answer
+  let answer;
 
   switch (sign) {
     case '+':
        answer = num1 + num2; 
-        break
+        break;
     
     case '-':
        answer = num1 - num2;   
-        break
+        break;
     
     case '*':
        answer = num1 * num2;   
-        break   
+        break;  
         
     default:
-       answer = null 
+       answer = null;
 } 
 
-return answer
+return answer;
 }
 
 
 const getQuestionAndAnswer = () => { 
-  const sign = chooseSign()
+  const sign = chooseSign();
 
-  let num1 = randomNumber()
-  let num2 = randomNumber()
+  let num1 = randomNumber();
+  let num2 = randomNumber();
 
 	const question = `${num1} ${sign} ${num2}`;
-	const correctAnswer = calculate(num1, num2, sign).toString()
+	const correctAnswer = calculate(num1, num2, sign).toString();
   
-  return [question, correctAnswer]
+  return [question, correctAnswer];
 }
 
 export default () => {
-  gameStart(description, getQuestionAndAnswer)
+  gameStart(description, getQuestionAndAnswer);
 }
