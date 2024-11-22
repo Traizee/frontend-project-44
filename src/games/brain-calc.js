@@ -9,44 +9,43 @@ const chooseSign = () => {
   const sign = signs[randomSign];
 
   return sign;
-}
+};
 
 const calculate = (num1, num2, sign) => {
   let answer;
 
   switch (sign) {
     case '+':
-       answer = num1 + num2; 
-        break;
-    
+      answer = num1 + num2;
+      break;
+
     case '-':
-       answer = num1 - num2;   
-        break;
-    
+      answer = num1 - num2;
+      break;
+
     case '*':
-       answer = num1 * num2;   
-        break;  
-        
+      answer = num1 * num2;
+      break;
+
     default:
-       answer = null;
-} 
+      answer = null;
+  };
 
-return answer;
-}
+  return answer;
+};
 
-
-const getQuestionAndAnswer = () => { 
+const getQuestionAndAnswer = () => {
   const sign = chooseSign();
 
-  let num1 = randomNumber();
-  let num2 = randomNumber();
+  const num1 = randomNumber();
+  const num2 = randomNumber();
 
-	const question = `${num1} ${sign} ${num2}`;
-	const correctAnswer = calculate(num1, num2, sign).toString();
-  
+  const question = `${num1} ${sign} ${num2}`;
+  const correctAnswer = calculate(num1, num2, sign).toString();
+
   return [question, correctAnswer];
-}
+};
 
 export default () => {
   gameStart(description, getQuestionAndAnswer);
-}
+};
