@@ -1,3 +1,1 @@
-export default () => {
-    return Math.floor(Math.random() * 13)
-}
+export default () => { return Math.floor(Math.random() * 13) };

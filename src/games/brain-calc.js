@@ -29,7 +29,7 @@ const calculate = (num1, num2, sign) => {
 
     default:
       answer = null;
-  };
+  }
 
   return answer;
 };
