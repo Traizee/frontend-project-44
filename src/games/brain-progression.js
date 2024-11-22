@@ -5,7 +5,7 @@ const description = 'What number is missing in the progression?';
 
 const createArray = () => {
   const firstNum = randomNumber();
-  const array = [firstNum, 0, 0, 0, 0, 0, 0,];
+  const array = [firstNum, 0, 0, 0, 0, 0, 0];
   const randomNumProgression = randomNumber();
 
   for (let i = 1; i < array.length; i += 1) {
@@ -27,5 +27,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-    gameStart(description, getQuestionAndAnswer);
+  gameStart(description, getQuestionAndAnswer);
 };

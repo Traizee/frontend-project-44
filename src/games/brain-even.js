@@ -6,7 +6,7 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const getEven = (num) => {
   if (num % 2 === 0) {
     return true;
-  } 
+  }
   return false;
 };
 

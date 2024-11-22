@@ -8,16 +8,16 @@ export default (description, getQuestionAndAnswer) => {
   console.log(description);
 
   for (let i = 0; i < 3; i += 1) {
-  const [question, correctAnswer] = getQuestionAndAnswer();
-  console.log(`Question: ${question}`);
-  const answerUser = readlineSync.question('Your answer: ');
-  if (answerUser === correctAnswer) {
-    console.log('Correct!')
-  } else {
-    console.log(`'${answerUser} 'is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-    console.log(`Let's try again, ${name}!`);
-  return;
+    const [question, correctAnswer] = getQuestionAndAnswer();
+    console.log(`Question: ${question}`);
+    const answerUser = readlineSync.question('Your answer: ');
+    if (answerUser === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answerUser} 'is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
-    console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };

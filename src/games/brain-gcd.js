@@ -4,11 +4,10 @@ import randomNumber from '../helper.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
-  if(a === 0) {
+  if (a === 0) {
     return b;
-  } else {
-    return gcd (b % a, a);
   }
+  return gcd(b % a, a);
 };
 
 const getQuestionAndAnswer = () => {
